@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+    <meta name="description" content="احجز رحلتك الفاخرة مع هدهد سليمان - نقل آمن ومريح">
+    <title>احجز رحلتك - هدهد سليمان</title>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        :root {
+            --navy: #2c3e50;
+            --beige: #b89b7f;
+            --white: #ffffff;
+            --gray: #f8f9fa;
+            --green: #25D366;
+            --transition: all 0.4s ease;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Almarai', sans-serif; background:var(--gray); color:#333; line-height:1.8; }
+
+        header {
+            background:var(--navy); padding:20px; position:sticky; top:0; z-index:1000;
+            display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;
+            box-shadow:0 6px 25px rgba(0,0,0,0.3);
+        }
+        .logo h1 { color:var(--beige); font-size:2.4rem; margin:0; }
+        .logo p { color:white; font-size:1.1rem; margin-top:5px; }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.94)),
+                        url('https://i.imgur.com/8Y8oL2J.jpg') center/cover no-repeat;
+            min-height:70vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:40px 20px;
+        }
+        .hero-bg h1 { font-size:3.5rem; color:var(--beige); text-shadow:0 5px 20px rgba(0,0,0,0.8); }
+        .hero-bg p { font-size:1.6rem; color:white; margin:20px 0; }
+
+        .booking-container {
+            max-width:1100px; margin:-80px auto 100px; padding:50px 30px; background:white;
+            border-radius:35px; box-shadow:0 30px 80px rgba(0,0,0,0.25); position:relative; z-index:10;
+        }
+
+        .form-grid {
+            display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:30px;
+        }
+        .form-group { position:relative; }
+        label {
+            display:block; font-size:1.4rem; color:var(--navy); margin-bottom:12px; font-weight:700;
+        }
+        input, select, textarea {
+            width:100%; padding:18px 20px; border-radius:18px; border:2px solid #ddd;
+            font-size:1.2rem; font-family:'Almarai',sans-serif; transition:var(--transition);
+        }
+        input:focus, select:focus, textarea:focus {
+            outline:none; border-color:var(--beige); box-shadow:0 0 20px rgba(184,155,127,0.3);
+        }
+        textarea { height:160px; resize:vertical; }
+
+        .extra-options {
+            grid-column:1/-1; background:#f1f1f1; padding:35px; border-radius:25px; margin:30px 0;
+        }
+        .extra-options h3 { color:var(--navy); margin-bottom:25px; font-size:1.8rem; text-align:center; }
+        .checkbox-grid {
+            display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;
+        }
+        .checkbox-item {
+            display:flex; align-items:center; gap:15px; font-size:1.2rem; padding:18px;
+            background:white; border-radius:18px; box-shadow:0 8px 25px rgba(0,0,0,0.08);
+        }
+        .checkbox-item input[type="checkbox"] {
+            width:30px; height:30px; accent-color:var(--beige);
+        }
+
+        .btn-submit {
+            background:var(--beige); color:var(--navy); padding:20px 60px; border:none;
+            border-radius:60px; font-size:1.6rem; font-weight:700; cursor:pointer;
+            transition:var(--transition); display:block; margin:50px auto 0;
+            box-shadow:0 15px 40px rgba(184,155,127,0.4);
+        }
+        .btn-submit:hover {
+            background:var(--navy); color:white; transform:scale(1.08);
+        }
+
+        .info-box {
+            background:var(--gray); padding:60px 30px; border-radius:30px; margin:80px 20px;
+            text-align:center; box-shadow:0 20px 50px rgba(0,0,0,0.1);
+        }
+        .info-box h2 { color:var(--navy); margin-bottom:35px; font-size:2.6rem; }
+        .info-box p { font-size:1.35rem; color:#444; margin:25px 0; line-height:2; }
+
+        .floating {
+            position:fixed; bottom:25px; left:20px; z-index:999;
+            display:flex; flex-direction:column; gap:18px;
+        }
+        .float-btn { 
+            width:65px; height:65px; border-radius:50%; display:flex; align-items:center; justify-content:center; 
+            font-size:2.4rem; color:white; box-shadow:0 10px 30px rgba(0,0,0,0.4); transition:var(--transition);
+        }
+        .float-btn:hover { transform:scale(1.15); }
+        .float-btn.whatsapp { background:var(--green); }
+        .float-btn.phone { background:var(--navy); }
+
+        footer { background:var(--navy); color:#e0e0e0; text-align:center; padding:70px 20px; font-size:1.2rem; }
+
+        /* تحسينات للموبايل */
+        @media (max-width:992px) {
+            .hero-bg { min-height:60vh; }
+            .booking-container { margin:-60px 20px 80px; }
+        }
+        @media (max-width:768px) {
+            .hero-bg h1 { font-size:2.6rem; }
+            .form-grid { grid-template-columns:1fr; }
+            .btn-submit { font-size:1.4rem; }
+        }
+        @media (max-width:480px) {
+            .hero-bg { min-height:50vh; }
+            .booking-container { margin:-40px 10px 60px; padding:30px 20px; }
+            .floating { bottom:15px; left:15px; gap:12px; }
+            .float-btn { width:58px; height:58px; font-size:2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>هدهد سليمان</h1>
+            <p>لخدمات النقل الفاخر والآمن</p>
+        </div>
+        <a href="index.html" style="color:white; font-size:1.5rem; text-decoration:none;">
+            <i class="fas fa-arrow-right"></i> الرئيسية
+        </a>
+    </header>
+
+    <div class="hero-bg">
+        <div>
+            <h1>احجز رحلتك الآن</h1>
+            <p>املأ النموذج وسيفتح واتساب مباشرة مع كل التفاصيل</p>
+        </div>
+    </div>
+
+    <div class="booking-container">
+        <form id="bookingForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>الاسم الكامل</label>
+                    <input type="text" id="name" required placeholder="محمد أحمد العتيبي">
+                </div>
+                <div class="form-group">
+                    <label>رقم الجوال (واتساب)</label>
+                    <input type="tel" id="phone" required placeholder="+966 50 123 4567">
+                </div>
+
+                <div class="form-group">
+                    <label>نوع الرحلة</label>
+                    <select id="trip_type" required>
+                        <option value="">اختر النوع</option>
+                        <option>ذهاب فقط</option>
+                        <option>ذهاب وعودة</option>
+                        <option>رحلة مخصصة (عدة محطات)</option>
+                        <option>استقبال مطار VIP</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>من أين؟</label>
+                    <select id="from" required>
+                        <option value="">اختر الموقع</option>
+                        <option>مطار جدة الدولي</option>
+                        <option>مطار الملك عبدالعزيز - صالة الحجاج</option>
+                        <option>مطار المدينة المنورة</option>
+                        <option>مطار الطائف</option>
+                        <option>جدة (المدينة)</option>
+                        <option>مكة المكرمة</option>
+                        <option>المدينة المنورة</option>
+                        <option>محطة قطار الحرمين</option>
+                        <option>أخرى</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>إلى أين؟</label>
+                    <select id="to" required>
+                        <option value="">اختر الوجهة</option>
+                        <option>مكة المكرمة</option>
+                        <option>المدينة المنورة</option>
+                        <option>جدة</option>
+                        <option>الطائف</option>
+                        <option>محطة قطار الحرمين</option>
+                        <option>فندق في مكة</option>
+                        <option>فندق في المدينة</option>
+                        <option>أخرى</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>تاريخ ووقت الذهاب</label>
+                    <input type="datetime-local" id="datetime_go" required>
+                </div>
+
+                <div class="form-group">
+                    <label>تاريخ ووقت العودة (اختياري)</label>
+                    <input type="datetime-local" id="datetime_return">
+                </div>
+
+                <div class="form-group">
+                    <label>عدد الركاب</label>
+                    <select id="passengers" required>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7+</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>عدد الحقائب الكبيرة</label>
+                    <input type="number" id="large_bags" min="0" value="0">
+                </div>
+
+                <div class="form-group">
+                    <label>نوع السيارة المفضلة</label>
+                    <select id="car_preference">
+                        <option>لا يهم (أفضل سعر)</option>
+                        <option>لكزس LS أو ES</option>
+                        <option>مرسيدس S-Class</option>
+                        <option>لاندكروزر / يوكن جيمس</option>
+                        <option>رنج روفر</option>
+                        <option>كاديلاك اسكاليد</option>
+                        <option>تويوتا كراون / كامري</option>
+                        <option>باص فاخر (10-14 راكب)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="extra-options">
+                <h3>خدمات إضافية (اختر ما تريد)</h3>
+                <div class="checkbox-grid">
+                    
+                    <label class="checkbox-item"><input type="checkbox" value="لوحة ترحيب باسمك"> لوحة ترحيب باسمك في المطار</label>
+                    <label class="checkbox-item"><input type="checkbox" value="مساعدة مع الأمتعة"> مساعدة في حمل الأمتعة</label>
+                    <label class="checkbox-item"><input type="checkbox" value="انتظار مجاني"> انتظار مجاني في حال تأخر الرحلة</label>
+                    <label class="checkbox-item"><input type="checkbox" value="زجاجات ماء وزمزم"> زجاجات ماء بارد + ماء زمزم</label>
+                    <label class="checkbox-item"><input type="checkbox" value="تمر وقهوة"> تمر وقهوة عربية في السيارة</label>
+                    <label class="checkbox-item"><input type="checkbox" value="سائق يتحدث الإنجليزية"> سائق يتحدث الإنجليزية</label>
+                </div>
+            </div>
+
+            <div class="form-group" style="grid-column:1/-1;">
+                <label>ملاحظات إضافية أو طلبات خاصة</label>
+                <textarea id="notes" placeholder="مثال: أريد سيارة سوداء - أو أحتاج توقف في فندق معين - أو أي طلب خاص..."></textarea>
+            </div>
+
+            <button type="button" class="btn-submit" onclick="sendToWhatsApp()">
+                <i class="fas fa-paper-plane"></i> أرسل الطلب عبر واتساب
+            </button>
+        </form>
+    </div>
+
+    <div class="info-box">
+        <h2>بعد الضغط على الزر</h2>
+        <p>سيفتح واتساب مباشرة مع رسالة كاملة تحتوي على كل تفاصيل حجزك</p>
+        <p>فريقنا هيرد عليك فورًا للتأكيد والسعر والسيارة</p>
+        <p style="font-size:1.8rem; color:var(--navy); margin-top:40px;">
+            <i class="fab fa-whatsapp" style="color:var(--green);"></i> متواجدون 24/7
+        </p>
+    </div>
+
+    <div class="floating">
+        <a href="tel:+966546301944" class="float-btn phone"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/966546301944?text=مرحباً%20أريد%20حجز%20رحلة" class="float-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 هدهد سليمان - جميع الحقوق محفوظة</p>
+        <p><a href="index.html" style="color:var(--beige);">العودة للرئيسية</a></p>
+    </footer>
+
+    <script>
+        // تاريخ اليوم كحد أدنى
+        const now = new Date();
+        now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+        const today = now.toISOString().slice(0,16);
+        document.getElementById('datetime_go').min = today;
+        document.getElementById('datetime_return').min = today;
+
+        function sendToWhatsApp() {
+            // جمع البيانات
+            const name = document.getElementById('name').value.trim() || 'غير محدد';
+            const phone = document.getElementById('phone').value.trim() || 'غير محدد';
+            const tripType = document.getElementById('trip_type').value || 'غير محدد';
+            const from = document.getElementById('from').value || 'غير محدد';
+            const to = document.getElementById('to').value || 'غير محدد';
+            const datetimeGo = document.getElementById('datetime_go').value || 'غير محدد';
+            const datetimeReturn = document.getElementById('datetime_return').value || 'لا يوجد عودة';
+            const passengers = document.getElementById('passengers').value || 'غير محدد';
+            const largeBags = document.getElementById('large_bags').value || '0';
+            const carPref = document.getElementById('car_preference').value || 'لا يهم';
+            const notes = document.getElementById('notes').value.trim() || 'لا توجد ملاحظات';
+
+            // جمع الخدمات الإضافية
+            let services = [];
+            document.querySelectorAll('.checkbox-item input[type="checkbox"]:checked').forEach(cb => {
+                services.push(cb.value);
+            });
+            const servicesText = services.length > 0 ? services.join('، ') : 'لا توجد خدمات إضافية';
+
+            // بناء الرسالة
+            const message = `
+*طلب حجز جديد من الموقع* 🚗
+
+📋 *التفاصيل*:
+- الاسم: ${name}
+- الجوال: ${phone}
+- نوع الرحلة: ${tripType}
+- من: ${from}
+- إلى: ${to}
+- تاريخ ووقت الذهاب: ${datetimeGo}
+- تاريخ ووقت العودة: ${datetimeReturn}
+- عدد الركاب: ${passengers}
+- عدد الحقائب الكبيرة: ${largeBags}
+- نوع السيارة المفضل: ${carPref}
+- خدمات إضافية: ${servicesText}
+- ملاحظات: ${notes}
+
+شكرًا لثقتك بهدهد سليمان ✨
+            `.trim();
+
+            // تشفير الرسالة وفتح واتساب
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/966546301944?text=${encodedMessage}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+
+</body>
+</html>
