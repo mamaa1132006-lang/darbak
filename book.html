@@ -3,72 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>حجز رحلة دربك - دربك</title>
+    <!-- عنوان الصفحة محسّن لمحركات البحث -->
+    <title>
+      حجز رحلة دربك - دربك
+    </title>
+    <!-- وصف الصفحة لمحركات البحث -->
     <meta name="description" content="احجز رحلتك الفاخرة مع دربك. خدمة نقل آمنة وفاخرة بين المدن والمطارات، مع سائقين محترفين وخيارات متعددة للرحلات." />
+    <!-- كلمات مفتاحية مستهدفة -->
     <meta name="keywords" content="حجز رحلة, دربك, نقل فاخر, VIP, مطار, مدينة, رحلة خاصة" />
-    <meta property="og:title" content="حجز رحلة دربك" />
+    <!-- Open Graph -->
+    <!-- Open Graph لمحركات البحث الاجتماعية -->
+    <meta property="og:title" content=" حجز رحلة دربك" />
     <meta property="og:description" content="احجز رحلتك الفاخرة مع دربك. خدمة نقل آمنة وفاخرة بين المدن والمطارات مع سائقين محترفين وخيارات متعددة للرحلات." />
     <meta property="og:image" content="https://darbak.site/images/book-og.jpg" />
     <meta property="og:url" content="https://darbak.site/book" />
     <meta property="og:type" content="website" />
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="حجز رحلة دربك - دربك" />
+    <meta name="twitter:title" content="حجز رحاله دربك - دربك" />
     <meta name="twitter:description" content="احجز أفضل رحلة الفاخرة مع دربك في جدة، مكة، المدينة. تجربة مريحة وآمنة." />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <style>
-      body, * { font-family: 'Almarai', sans-serif; box-sizing: border-box; }
-      .input-focus:focus {
+      body, * { font-family: &#39;Almarai&#39;, sans-serif; box-sizing: border-box; }
+    .input-focus:focus {
         outline: none;
         border-color: #b89b7f;
         box-shadow: 0 0 0 3px rgba(184,155,127,0.2);
-      }
-      .hero-pattern {
+    }
+    .hero-pattern {
         background-color: #34495e;
         background-image: 
-          linear-gradient(30deg, rgba(44,62,80,0.05) 12%, transparent 12.5%, transparent 87%, rgba(44,62,80,0.05) 87.5%, rgba(44,62,80,0.05)),
-          linear-gradient(150deg, rgba(44,62,80,0.05) 12%, transparent 12.5%, transparent 87%, rgba(44,62,80,0.05) 87.5%, rgba(44,62,80,0.05));
+            linear-gradient(30deg, rgba(44,62,80,0.05) 12%, transparent 12.5%, transparent 87%, rgba(44,62,80,0.05) 87.5%, rgba(44,62,80,0.05)),
+            linear-gradient(150deg, rgba(44,62,80,0.05) 12%, transparent 12.5%, transparent 87%, rgba(44,62,80,0.05) 87.5%, rgba(44,62,80,0.05));
         background-size: 80px 140px;
         background-position: 0 0, 40px 70px;
-      }
+    }
     </style>
   </head>
   <body class="h-full bg-gray-100">
     <!-- Header -->
     <header class="bg-gray-800 text-white p-6 flex justify-between items-center shadow-lg">
       <div>
-        <h1 class="text-3xl font-extrabold text-beige-600">دربك</h1>
-        <p class="text-sm">حلتك معنا.. أمان وفخامة</p>
+        <h1 class="text-3xl font-extrabold text-beige-600">
+          دربك
+        </h1>
+        <p class="text-sm">
+          حلتك معنا.. أمان وفخامة
+        </p>
       </div>
-      <a href="index.html" class="bg-beige-600 text-white px-4 py-2 rounded-2xl font-bold flex items-center gap-2">
-        <i class="fas fa-home"></i> الصفحة الرئيسية
-      </a>
+      <a href="index.html" class="bg-beige-600 text-white px-4 py-2 rounded-2xl font-bold flex items-center gap-2">      <i class="fas fa-home"></i>
+      الصفحة الرئيسية
+</a>
     </header>
-
     <!-- Hero Section -->
     <section class="hero-pattern py-16 text-center text-white">
-      <h2 class="text-4xl font-extrabold mb-4">احجز رحلتك الفاخرة الآن</h2>
-      <p class="text-lg">خدمة نقل آمنة ومريحة بين المدن والمطارات</p>
+      <h2 class="text-4xl font-extrabold mb-4">
+        احجز رحلتك الفاخرة الآن
+      </h2>
+      <p class="text-lg">
+        خدمة نقل آمنة ومريحة بين المدن والمطارات
+      </p>
     </section>
-
     <!-- Booking Form -->
     <section class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl p-10 -mt-16">
       <form id="bookingForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Name -->
         <div>
           <label for="name" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-user ml-2 text-beige-600"></i> الاسم الكامل
+            <i class="fas fa-user ml-2 text-beige-600"></i>
+            الاسم الكامل
           </label>
-          <input type="text" id="name" required
-            oninput="this.value=this.value.replace(/[^a-zA-Z\u0600-\u06FF\s]/g,'');"
-            class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl"
-            placeholder="أدخل الاسم الكامل"
-          />
+          <input type="text" id="name" required="" onkeypress="return /^[\u0600-\u06FFa-zA-Z\s]+$/.test(event.key)" onpaste="event.preventDefault(); const text = (event.clipboardData||window.clipboardData).getData(&#39;text&#39;); this.value+=text.replace(/[0-9]/g,&#39;&#39;);" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl" />
         </div>
-
-        <!-- Phone -->
-        <div>
+    <!-- Phone -->
+          <div>
   <label for="phone" class="block mb-2 font-bold text-gray-700">
     <i class="fas fa-phone ml-2 text-beige-600"></i> رقم الجوال
   </label>
@@ -83,124 +94,219 @@
     onpaste="event.preventDefault(); const paste = (event.clipboardData || window.clipboardData).getData('text'); this.value += paste.replace(/[^0-9]/g,'');"
   />
 </div>
-
         <!-- From City -->
         <div>
           <label for="fromCity" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-map-marker-alt ml-2 text-beige-600"></i> من مدينة
+            <i class="fas fa-map-marker-alt ml-2 text-beige-600"></i>
+            من مدينة
           </label>
-          <select id="fromCity" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
-            <option value="">اختر المدينة</option>
-            <option value="الرياض">الرياض</option>
-            <option value="جدة">جدة</option>
-            <option value="مكة">مكة المكرمة</option>
-            <option value="المدينة">المدينة المنورة</option>
+          <select id="fromCity" required="" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
+            <option value="">
+              اختر المدينة
+            </option>
+            <option value="الرياض">
+              الرياض
+            </option>
+            <option value="جدة">
+              جدة
+            </option>
+            <option value="مكة">
+              مكة المكرمة
+            </option>
+            <option value="المدينة">
+              المدينة المنورة
+            </option>
           </select>
         </div>
-
         <!-- To City -->
         <div>
           <label for="toCity" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-map-marker-alt ml-2 text-beige-600"></i> إلى مدينة
+            <i class="fas fa-map-marker-alt ml-2 text-beige-600"></i>
+            إلى مدينة
           </label>
-          <select id="toCity" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
-            <option value="">اختر المدينة</option>
-            <option value="الرياض">الرياض</option>
-            <option value="جدة">جدة</option>
-            <option value="مكة">مكة المكرمة</option>
-            <option value="المدينة">المدينة المنورة</option>
+          <select id="toCity" required="" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
+            <option value="">
+              اختر المدينة
+            </option>
+            <option value="الرياض">
+              الرياض
+            </option>
+            <option value="جدة">
+              جدة
+            </option>
+            <option value="مكة">
+              مكة المكرمة
+            </option>
+            <option value="المدينة">
+              المدينة المنورة
+            </option>
           </select>
         </div>
-
         <!-- Date -->
         <div>
           <label for="tripDate" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-calendar ml-2 text-beige-600"></i> تاريخ الرحلة
+            <i class="fas fa-calendar ml-2 text-beige-600"></i>
+            تاريخ الرحلة
           </label>
-          <input type="date" id="tripDate" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl" />
+          <input type="date" id="tripDate" required="" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl" />
         </div>
-
         <!-- Time -->
         <div>
           <label for="tripTime" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-clock ml-2 text-beige-600"></i> وقت الرحلة
+            <i class="fas fa-clock ml-2 text-beige-600"></i>
+            وقت الرحلة
           </label>
-          <input type="time" id="tripTime" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl" />
+          <input type="time" id="tripTime" required="" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl" />
         </div>
-
         <!-- Passengers -->
         <div>
           <label for="passengers" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-users ml-2 text-beige-600"></i> عدد المسافرين
+            <i class="fas fa-users ml-2 text-beige-600"></i>
+            عدد المسافرين
           </label>
-          <select id="passengers" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
-            <option value="1">1 شخص</option>
-            <option value="2">2 شخص</option>
-            <option value="3">3 أشخاص</option>
-            <option value="4">4 أشخاص</option>
-            <option value="5">5 أشخاص</option>
-            <option value="6">6+ أشخاص</option>
+          <select id="passengers" required="" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
+            <option value="1">
+              1 شخص
+            </option>
+            <option value="2">
+              2 شخص
+            </option>
+            <option value="3">
+              3 أشخاص
+            </option>
+            <option value="4">
+              4 أشخاص
+            </option>
+            <option value="5">
+              5 أشخاص
+            </option>
+            <option value="6">
+              6+ أشخاص
+            </option>
           </select>
         </div>
-
         <!-- Car Type -->
         <div>
-          <label for="carType" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-car-side ml-2 text-beige-600"></i> نوع السيارة
+          <label for="carType" style="display: block; font-size: ${config.font_size * 1.1}px; color: ${config.text_color}; margin-bottom: 0.5rem; font-weight: 700; font-family: &#39;${config.font_family}&#39;, sans-serif;">
+            <i class="fas fa-car-side" style="margin-left: 0.5rem; color: ${config.primary_action_color};"></i>
+            نوع السيارة
           </label>
-          <select id="carType" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
-            <option value="">اختر السيارة</option>
-            <option value="Toyota Camry 2025">Toyota Camry 2025</option>
-            <option value="Land Cruiser 2025">Land Cruiser 2025</option>
-            <option value="Mercedes S-Class 2025">Mercedes S-Class 2025</option>
-            <option value="Lexus LS 2025">Lexus LS 2025</option>
-            <option value="Range Rover 2025">Range Rover 2025</option>
-            <option value="GMC Yukon 2025">GMC Yukon 2025</option>
-            <option value="Toyota Hiace 2025">Toyota Hiace 2025</option>
-            <option value="Ford Taurus 2025">Ford Taurus 2025</option>
-            <option value="Lexus LX 570 2025">Lexus LX 570 2025</option>
-            <option value="Toyota Crown 2025">Toyota Crown 2025</option>
-            <option value="Mercedes-Benz V-Class 2025">Mercedes-Benz V-Class 2025</option>
+          <select id="carType" required="" class="input-focus" style="width: 100%; padding: 1rem; border-radius: 12px; border: 2px solid #ddd; font-size: ${config.font_size}px; font-family: &#39;${config.font_family}&#39;, sans-serif; background-color: ${config.surface_color}; color: ${config.text_color};">
+            <option value="">
+              اختر السيارة
+            </option>
+            <option value="Toyota Camry 2025">
+              Toyota Camry 2025
+            </option>
+            <option value="Land Cruiser 2025">
+              Land Cruiser 2025
+            </option>
+            <option value="Mercedes S-Class 2025">
+              Mercedes S-Class 2025
+            </option>
+            <option value="Lexus LS 2025">
+              Lexus LS 2025
+            </option>
+            <option value="Range Rover 2025">
+              Range Rover 2025
+            </option>
+            <option value="GMC Yukon 2025">
+              GMC Yukon 2025
+            </option>
+            <option value="Toyota Hiace 2025">
+              Toyota Hiace 2025
+            </option>
+            <option value="Ford Taurus 2025">
+              Ford Taurus 2025
+            </option>
+            <option value="Lexus LX 570 2025">
+              Lexus LX 570 2025
+            </option>
+            <option value="Toyota Crown 2025">
+              Toyota Crown 2025
+            </option>
+            <option value="Mercedes-Benz V-Class 2025">
+              Mercedes-Benz V-Class 2025
+            </option>
           </select>
         </div>
-
         <!-- Trip Type -->
         <div>
           <label for="tripType" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-car ml-2 text-beige-600"></i> نوع الرحلة
+            <i class="fas fa-car ml-2 text-beige-600"></i>
+            نوع الرحلة
           </label>
-          <select id="tripType" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
-            <option value="رحلة فردية">رحلة فردية</option>
-            <option value="رحلة جماعية">رحلة جماعية</option>
-            <option value="VIP">VIP</option>
+          <select id="tripType" required="" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
+            <option value="رحلة فردية">
+              رحلة فردية
+            </option>
+            <option value="رحلة جماعية">
+              رحلة جماعية
+            </option>
+            <option value="VIP">
+              VIP
+            </option>
           </select>
         </div>
-
+        <!-- Extra Services -->
+        <div style="grid-column: 1 / -1;">
+          <label style="display: block; font-size: ${config.font_size * 1.1}px; color: ${config.text_color}; margin-bottom: 1rem; font-weight: 700; font-family: &#39;${config.font_family}&#39;, sans-serif;">
+            <i class="fas fa-star" style="margin-left: 0.5rem; color: ${config.primary_action_color};"></i>
+            خدمات إضافية
+          </label>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <label style="display: flex; align-items: center; gap: 0.5rem; font-size: ${config.font_size * 0.95}px; font-family: &#39;${config.font_family}&#39;, sans-serif; cursor: pointer;">
+              <input type="checkbox" value="واي فاي" class="extra-service" style="width: 1.2rem; height: 1.2rem; cursor: pointer; accent-color: ${config.primary_action_color};" />
+              واي فاي مجاني
+            </label>
+            <label style="display: flex; align-items: center; gap: 0.5rem; font-size: ${config.font_size * 0.95}px; font-family: &#39;${config.font_family}&#39;, sans-serif; cursor: pointer;">
+              <input type="checkbox" value="مياه باردة" class="extra-service" style="width: 1.2rem; height: 1.2rem; cursor: pointer; accent-color: ${config.primary_action_color};" />
+              مياه باردة
+            </label>
+            <label style="display: flex; align-items: center; gap: 0.5rem; font-size: ${config.font_size * 0.95}px; font-family: &#39;${config.font_family}&#39;, sans-serif; cursor: pointer;">
+              <input type="checkbox" value="مجلات وصحف" class="extra-service" style="width: 1.2rem; height: 1.2rem; cursor: pointer; accent-color: ${config.primary_action_color};" />
+              مجلات وصحف
+            </label>
+            <label style="display: flex; align-items: center; gap: 0.5rem; font-size: ${config.font_size * 0.95}px; font-family: &#39;${config.font_family}&#39;, sans-serif; cursor: pointer;">
+              <input type="checkbox" value="كرسي أطفال" class="extra-service" style="width: 1.2rem; height: 1.2rem; cursor: pointer; accent-color: ${config.primary_action_color};" />
+              كرسي أطفال
+            </label>
+          </div>
+        </div>
+        <!-- Notes -->
+        <div style="grid-column: 1 / -1;">
+          <label for="notes" style="display: block; font-size: ${config.font_size * 1.1}px; color: ${config.text_color}; margin-bottom: 0.5rem; font-weight: 700; font-family: &#39;${config.font_family}&#39;, sans-serif;">
+            <i class="fas fa-comment" style="margin-left: 0.5rem; color: ${config.primary_action_color};"></i>
+            ملاحظات إضافية
+          </label>
+          <textarea id="notes" rows="4" class="input-focus" placeholder="أخبرنا بأي متطلبات خاصة..." style="width: 100%; padding: 1rem; border-radius: 12px; border: 2px solid #ddd; font-size: ${config.font_size}px; font-family: &#39;${config.font_family}&#39;, sans-serif; resize: vertical; background-color: ${config.surface_color}; color: ${config.text_color};">
+          </textarea>
+        </div>
         <!-- Submit Button -->
         <div class="md:col-span-2 text-center mt-4">
           <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded-2xl font-bold hover:bg-green-600 transition-all">
-            <i class="fab fa-whatsapp ml-2"></i> إرسال الحجز عبر واتساب
+            <i class="fab fa-whatsapp ml-2"></i>
+            إرسال الحجز عبر واتساب
           </button>
         </div>
       </form>
     </section>
-
     <script>
-      const bookingForm = document.getElementById('bookingForm');
-      bookingForm.addEventListener('submit', function(e){
-        e.preventDefault();
+      const bookingForm = document.getElementById(&#39;bookingForm&#39;);
+    bookingForm.addEventListener(&#39;submit&#39;, function(e){
+      e.preventDefault();
+      const name = document.getElementById(&#39;name&#39;).value;
+      const phone = document.getElementById(&#39;phone&#39;).value;
+      const fromCity = document.getElementById(&#39;fromCity&#39;).value;
+      const toCity = document.getElementById(&#39;toCity&#39;).value;
+      const tripDate = document.getElementById(&#39;tripDate&#39;).value;
+      const tripTime = document.getElementById(&#39;tripTime&#39;).value;
+      const passengers = document.getElementById(&#39;passengers&#39;).value;
+      const tripType = document.getElementById(&#39;tripType&#39;).value;
 
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
-        const fromCity = document.getElementById('fromCity').value;
-        const toCity = document.getElementById('toCity').value;
-        const tripDate = document.getElementById('tripDate').value;
-        const tripTime = document.getElementById('tripTime').value;
-        const passengers = document.getElementById('passengers').value;
-        const carType = document.getElementById('carType').value;
-        const tripType = document.getElementById('tripType').value;
+const carType = document.getElementById(&#39;carType&#39;).value;
 
-        const message = `🎫 *حجز رحلة جديدة - دربك*
+const message = `🎫 *حجز رحلة جديدة - ${config.company_name}*
 
 👤 *الاسم:* ${name}
 📱 *الجوال:* ${phone}
@@ -214,9 +320,9 @@
 🚙 نوع السيارة: ${carType}
 ✨ نوع الرحلة: ${tripType}`;
 
-        const whatsappURL = `https://wa.me/966546301944?text=${encodeURIComponent(message)}`;
-        window.open(whatsappURL, '_blank');
-      });
+      const whatsappURL = `https://wa.me/966546301944?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, &#39;_blank&#39;);
+    });
     </script>
   </body>
 </html>
