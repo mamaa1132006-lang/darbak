@@ -1,0 +1,210 @@
+/* Hotels Page Styles */
+
+
+h2 {
+    color: var(--navy);
+    text-align: right;
+    border-bottom: 3px solid var(--beige);
+    padding-bottom: 12px;
+    margin: 40px 0 25px;
+    font-size: 1.9em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    transition: all 0.4s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: var(--navy);
+    font-weight: bold;
+}
+
+.btn {
+    background-color: var(--beige);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    display: inline-block;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: var(--beige-light);
+}
+
+.hotel-nav .nav-pills .nav-link {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.hotel-nav .nav-pills .nav-link.active {
+    background: var(--beige);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hotel-nav .nav-pills {
+        flex-direction: column;
+    }
+    .hotel-nav .nav-pills .nav-link {
+        margin: 5px 0;
+    }
+}
+
+/* Additional Styles for Better Design */
+.hotel-nav {
+    background: var(--section-bg);
+    padding: 15px 0;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hotel-nav .container {
+    margin-top: 0;
+}
+
+.grid .card {
+    position: relative;
+}
+
+.grid .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(184,155,127,0.1), rgba(52,73,94,0.1));
+    border-radius: 16px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.grid .card:hover::before {
+    opacity: 1;
+}
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    h2 {
+        font-size: 1.7em;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 10px;
+        margin-top: 20px;
+    }
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    .card img {
+        height: 150px;
+    }
+    .card-title {
+        font-size: 1em;
+    }
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.8em;
+    }
+    h2 {
+        font-size: 1.5em;
+        margin: 30px 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px 5px;
+        margin-top: 15px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .card img {
+        height: 120px;    
+        
+    }
+    .card-title {
+        font-size: 0.9em;
+    }
+    .btn {
+        padding: 6px 12px;
+        font-size: 0.75em;
+    }
+    h2 {
+        font-size: 1.3em;
+        margin: 20px 0 15px;
+    }
+    .hotel-nav {
+        padding: 10px 0;
+    }
+    .hotel-nav .nav-pills .nav-link {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+}
