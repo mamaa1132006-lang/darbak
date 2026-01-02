@@ -1,364 +1,190 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title id="title-ar">حجز رحلة دربك للسفر - دربك</title>
-    <title id="title-en" class="hidden">Book Darbak Travels Trip - Darbak</title>
-    <meta name="description" id="desc-ar" content="احجز رحلتك الفاخرة مع دربك للسفر. خدمة سفر آمنة وفاخرة بين المدن والمطارات، مع سائقين محترفين وخيارات متعددة للرحلات.">
-    <meta name="description" id="desc-en" class="hidden" content="Book your luxury trip with Darbak Travels. Safe and luxurious travel service between cities and airports, with professional drivers and multiple trip options.">
-    <meta name="keywords" id="keywords-ar" content="حجز رحلة دربك للسفر, سفر فاخر السعودية, سيارات VIP مع سائق, حجز سيارة من مطار جدة, رحلات خاصة المدينة المنورة, دربك للسفر, حجز عبر واتساب, سيارات حديثة 2025, مواصلات الحجاج, سفر آمن مكة">
-    <meta name="keywords" id="keywords-en" class="hidden" content="book Darbak Travels trip, luxury travel Saudi Arabia, VIP cars with driver, book car from Jeddah airport, private trips Medina, Darbak Travels, book via WhatsApp, modern cars 2025, pilgrims transportation, safe travel Mecca">
-    <meta name="keywords" id="keywords-en" class="hidden" content="Book trip, Darbak, luxury transport, VIP, airport, city, private trip">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://darbak.site/book.html"/>
-    <meta property="og:title" content="حجز رحلة دربك للسفر" />
-    <meta property="og:description" content="احجز رحلتك الفاخرة مع دربك للسفر. خدمة سفر آمنة وفاخرة بين المدن والمطارات مع سائقين محترفين وخيارات متعددة للرحلات." />
-    <meta property="og:image" content="https://darbak.site/images/book-og.jpg" />
-    <meta property="og:url" content="https://darbak.site/book.html" />
-    <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#d4af37">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>حجز رحلة دربك - دربك</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+<style>
+  body, * { font-family: 'Almarai', sans-serif; box-sizing: border-box; transition: background-color 0.3s, color 0.3s; }
+  .input-focus:focus { outline: none; border-color: #b89b7f; box-shadow: 0 0 0 3px rgba(184,155,127,0.2); }
+  .hero-pattern {
+    background-color: #34495e;
+    background-image: linear-gradient(30deg, rgba(44,62,80,0.05) 12%, transparent 12.5%, transparent 87%, rgba(44,62,80,0.05) 87.5%, rgba(44,62,80,0.05)),
+                      linear-gradient(150deg, rgba(44,62,80,0.05) 12%, transparent 12.5%, transparent 87%, rgba(44,62,80,0.05) 87.5%, rgba(44,62,80,0.05));
+    background-size: 80px 140px;
+    background-position: 0 0, 40px 70px;
+  }
+  /* Dark Mode Colors */
+  .dark-mode body { background-color: #1e1e1e; color: #f5f5f5; }
+  .dark-mode .bg-white { background-color: #2c2c2c !important; }
+  .dark-mode .text-gray-700 { color: #ddd !important; }
+  .dark-mode .hero-pattern { background-color: #222; }
+  .dark-mode header { background-color: #111 !important; }
+  .dark-mode footer { background-color: #111 !important; color: #ccc; }
+</style>
+</head>
+<body class="h-full bg-gray-100">
 
-    <link rel="icon" href="https://darbak.site/images/7ba80379-0779-4397-b93c-e4d06f0ca2aa.webp" type="image/webp">
-    <link rel="shortcut icon" href="https://darbak.site/images/7ba80379-0779-4397-b93c-e4d06f0ca2aa.webp" type="image/webp">
-    <link rel="apple-touch-icon" href="https://darbak.site/images/7ba80379-0779-4397-b93c-e4d06f0ca2aa.webp">
+<!-- Header -->
+<header class="bg-gray-800 text-white p-6 flex justify-between items-center shadow-lg">
+  <div>
+    <h1 class="text-3xl font-extrabold text-beige-600">دربك</h1>
+    <p class="text-sm">حلتك معنا.. أمان وفخامة</p>
+  </div>
+  <div class="flex items-center gap-3">
+    <a href="index.html" class="bg-beige-600 text-white px-4 py-2 rounded-2xl font-bold flex items-center gap-2">
+      <i class="fas fa-home"></i> الصفحة الرئيسية
+    </a>
+    <button id="darkToggle" class="bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-white p-2 rounded-full text-lg">
+      <i class="fas fa-moon"></i>
+    </button>
+  </div>
+</header>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "حجز رحلة دربك",
-      "url": "https://darbak.site/book.html"
-    }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body, * { font-family: 'Almarai', sans-serif; box-sizing: border-box; }
-      .hidden { display: none !important; }
-      .lang-switch { display: inline-flex; gap: 6px; align-items: center; }
-      .lang-btn { padding: 6px 10px; border-radius: 6px; border: 1px solid transparent; cursor: pointer; font-weight: 700; transition: all 0.3s ease; }
-      .lang-btn.active { background: #E5C100; color: #111; transform: scale(1.05); }
-      .lang-btn:not(.active) { background: transparent; color: inherit; }
-      .lang-btn:hover { background: rgba(255,255,255,0.1); transform: translateY(-2px); }
-      .lang-ar { font-family: 'Almarai', sans-serif; }
-      .lang-en { font-family: 'Roboto', sans-serif; }
-      .dark-btn { background: transparent; border: 1px solid transparent; cursor: pointer; font-size: 18px; padding: 6px; border-radius: 6px; transition: all 0.3s ease; }
-      .dark-btn:hover { background: rgba(255,255,255,0.1); transform: rotate(360deg); }
-    .input-focus:focus {
-        outline: none;
-        border-color: #b89b7f;
-        box-shadow: 0 0 0 3px rgba(184,155,127,0.2);
-        transform: scale(1.02);
-        transition: all 0.3s ease;
-    }
-    .hero-pattern {
-        background-color: #34495e;
-        background-image: 
-            linear-gradient(30deg, rgba(44,62,80,0.05) 12%, transparent 12.5%, transparent 87%, rgba(44,62,80,0.05) 87.5%, rgba(44,62,80,0.05)),
-            linear-gradient(150deg, rgba(44,62,80,0.05) 12%, transparent 12.5%, transparent 87%, rgba(44,62,80,0.05) 87.5%, rgba(44,62,80,0.05));
-        background-size: 80px 140px;
-        background-position: 0 0, 40px 70px;
-    }
-    .lang-float {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1000;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        padding: 10px;
-    }
-    @media (max-width: 480px) {
-        .lang-float { top: 15px; right: 15px; }
-        .hero-pattern h2 { font-size: 2rem; }
-        .hero-pattern p { font-size: 1rem; }
-        section.max-w-5xl { padding: 20px; }
-        .grid.grid-cols-1.md\\:grid-cols-2 { grid-template-columns: 1fr; gap: 1rem; }
-        input, select, textarea { padding: 12px; font-size: 0.9rem; }
-        label { font-size: 0.9rem; }
-    }
-    </style>
-  </head>
-  <body class="h-full bg-gray-100">
-    <!-- Header -->
-    <header class="bg-gray-800 text-white p-6 flex justify-between items-center shadow-lg">
-      <div>
-        <h1 class="text-3xl font-extrabold text-beige-600" data-i18n="brand.name">
-          دربك
-        </h1>
-        <p class="text-sm" data-i18n="brand.tagline">
-          حلتك معنا.. أمان وفخامة
-        </p>
-      </div>
-      <div style="display:flex; align-items:center; gap:12px">
-    <div class="lang-switch">
-                <button class="lang-btn" data-lang="ar" id="btn-ar">العربية</button>
-                <button class="lang-btn" data-lang="en" id="btn-en">English</button>
-            </div>
-        <a href="index.html" class="bg-beige-600 text-white px-4 py-2 rounded-2xl font-bold flex items-center gap-2 transition-all duration-300 hover:bg-beige-700 hover:scale-105 hover:shadow-lg">      <i class="fas fa-home"></i>
-        <span data-i18n="nav.homepage">الصفحة الرئيسية</span>
-        </a>
-      </div>
-    </header>
-    <!-- Hero Section -->
-    <section class="hero-pattern py-16 text-center text-white">
-      <h2 class="text-4xl font-extrabold mb-4" data-i18n="book.hero.title">
-        احجز رحلتك الفاخرة الآن
-      </h2>
-      <p class="text-lg" data-i18n="book.hero.subtitle">
-        خدمة نقل آمنة ومريحة بين المدن والمطارات
-      </p>
-    </section>
-    <!-- Booking Form -->
-    <section class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl p-10 -mt-16" id="bookingForm">
-      <form id="bookingForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Name -->
-        <div>
-          <label for="name" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-user ml-2 text-beige-600"></i>
-            <span data-i18n="book.form.name">الاسم الكامل</span>
-          </label>
-          <input type="text" id="name" required="" onkeypress="return /^[\u0600-\u06FFa-zA-Z\s]+$/.test(event.key)" onpaste="event.preventDefault(); const text = (event.clipboardData||window.clipboardData).getData('text'); this.value+=text.replace(/[0-9]/g,'');" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl" />
-        </div>
+<!-- Hero Section -->
+<section class="hero-pattern py-16 text-center text-white">
+  <h2 class="text-4xl font-extrabold mb-4">احجز رحلتك الفاخرة الآن</h2>
+  <p class="text-lg">خدمة نقل آمنة ومريحة بين المدن والمطارات</p>
+</section>
+
+<!-- Booking Form -->
+<section class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl p-10 -mt-16">
+  <form id="bookingForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Name -->
+    <div>
+      <label for="name" class="block mb-2 font-bold text-gray-700">
+        <i class="fas fa-user ml-2 text-beige-600"></i> الاسم الكامل
+      </label>
+      <input type="text" id="name" required 
+        onkeypress="return /^[\u0600-\u06FFa-zA-Z\s]+$/.test(event.key)" 
+        onpaste="event.preventDefault(); const text = (event.clipboardData||window.clipboardData).getData('text'); this.value+=text.replace(/[0-9]/g,'');" 
+        class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl" />
+    </div>
     <!-- Phone -->
-          <div>
-  <label for="phone" class="block mb-2 font-bold text-gray-700">
-    <i class="fas fa-phone ml-2 text-beige-600"></i> <span data-i18n="book.form.phone">رقم الجوال</span>
-  </label>
-    <input
-    type="tel"
-    id="phone"
-    required
-    maxlength="15"
-    data-i18n-placeholder="book.phone.placeholder"
-    placeholder="أدخل رقم الجوال"
-    class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl"
-    oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-    onpaste="event.preventDefault(); const paste = (event.clipboardData || window.clipboardData).getData('text'); this.value += paste.replace(/[^0-9]/g,'');"
-  />
-</div>
-        <!-- From City -->
-        <div>
-          <label for="fromCity" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-map-marker-alt ml-2 text-beige-600"></i>
-            <span data-i18n="book.form.from">من مدينة</span>
-          </label>
-          <select id="fromCity" required="" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
-            <option value="" data-i18n="book.chooseCity">
-              اختر المدينة
-            </option>
-            <option value="الرياض" data-i18n="city.riyadh">
-              الرياض
-            </option>
-            <option value="جدة" data-i18n="city.jeddah">
-              جدة
-            </option>
-            <option value="مكة" data-i18n="city.makkah">
-              مكة المكرمة
-            </option>
-            <option value="المدينة" data-i18n="city.madinah">
-              المدينة المنورة
-            </option>
-          </select>
-        </div>
-        <!-- To City -->
-        <div>
-          <label for="toCity" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-map-marker-alt ml-2 text-beige-600"></i>
-            <span data-i18n="book.form.to">إلى مدينة</span>
-          </label>
-          <select id="toCity" required="" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
-            <option value="" data-i18n="book.chooseCity">
-              اختر المدينة
-            </option>
-            <option value="الرياض" data-i18n="city.riyadh">
-              الرياض
-            </option>
-            <option value="جدة" data-i18n="city.jeddah">
-              جدة
-            </option>
-            <option value="مكة" data-i18n="city.makkah">
-              مكة المكرمة
-            </option>
-            <option value="المدينة" data-i18n="city.madinah">
-              المدينة المنورة
-            </option>
-          </select>
-        </div>
-        <!-- Date -->
-        <div>
-          <label for="tripDate" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-calendar ml-2 text-beige-600"></i>
-            <span data-i18n="book.form.date">تاريخ الرحلة</span>
-          </label>
-          <input type="date" id="tripDate" required="" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl" />
-        </div>
-        <!-- Time -->
-        <div>
-          <label for="tripTime" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-clock ml-2 text-beige-600"></i>
-            <span data-i18n="book.form.time">وقت الرحلة</span>
-          </label>
-          <input type="time" id="tripTime" required="" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl" />
-        </div>
-        <!-- Passengers -->
-        <div>
-          <label for="passengers" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-users ml-2 text-beige-600"></i>
-            <span data-i18n="book.form.passengers">عدد المسافرين</span>
-          </label>
-          <select id="passengers" required="" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
-            <option value="1" data-i18n="passengers.1">
-              1 شخص
-            </option>
-            <option value="2" data-i18n="passengers.2">
-              2 شخص
-            </option>
-            <option value="3" data-i18n="passengers.3">
-              3 أشخاص
-            </option>
-            <option value="4" data-i18n="passengers.4">
-              4 أشخاص
-            </option>
-            <option value="5" data-i18n="passengers.5">
-              5 أشخاص
-            </option>
-            <option value="6" data-i18n="passengers.6">
-              6+ أشخاص
-            </option>
-          </select>
-        </div>
-        <!-- Car Type -->
-        <div>
-          <label for="carType" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-car-side ml-2 text-beige-600"></i>
-            <span data-i18n="book.form.carType">نوع السيارة</span>
-          </label>
-          <select id="carType" required="" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
-            <option value="" data-i18n="book.chooseCar">
-              اختر السيارة
-            </option>
-            <option value="Toyota Camry 2025" data-i18n="car.toyota.camry">
-              Toyota Camry 2025
-            </option>
-            <option value="Land Cruiser 2025" data-i18n="car.land.cruiser">
-              Land Cruiser 2025
-            </option>
-            <option value="Mercedes S-Class 2025" data-i18n="car.mercedes.sclass">
-              Mercedes S-Class 2025
-            </option>
-            <option value="Lexus LS 2025" data-i18n="car.lexus.ls">
-              Lexus LS 2025
-            </option>
-            <option value="Range Rover 2025" data-i18n="car.range.rover">
-              Range Rover 2025
-            </option>
-            <option value="GMC Yukon 2025" data-i18n="car.gmc.yukon">
-              GMC Yukon 2025
-            </option>
-            <option value="Toyota Hiace 2025" data-i18n="car.toyota.hiace">
-              Toyota Hiace 2025
-            </option>
-            <option value="Ford Taurus 2025" data-i18n="car.ford.taurus">
-              Ford Taurus 2025
-            </option>
-            <option value="Lexus LX 570 2025" data-i18n="car.lexus.lx570">
-              Lexus LX 570 2025
-            </option>
-            <option value="Toyota Crown 2025" data-i18n="car.toyota.crown">
-              Toyota Crown 2025
-            </option>
-            <option value="Mercedes-Benz V-Class 2025" data-i18n="car.mercedes.vclass">
-              Mercedes-Benz V-Class 2025
-            </option>
-          </select>
-        </div>
-        <!-- Trip Type -->
-        <div>
-          <label for="tripType" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-car ml-2 text-beige-600"></i>
-            <span data-i18n="book.form.tripType">نوع الرحلة</span>
-          </label>
-          <select id="tripType" required="" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
-            <option value="رحلة فردية" data-i18n="book.trip.individual">
-              رحلة فردية
-            </option>
-            <option value="رحلة جماعية" data-i18n="book.trip.group">
-              رحلة جماعية
-            </option>
-            <option value="VIP" data-i18n="book.trip.vip">
-              VIP
-            </option>
-          </select>
-        </div>
-        <!-- Extra Services -->
-        <div class="col-span-full">
-          <label class="block mb-4 font-bold text-gray-700" data-i18n="book.extra.services">
-            <i class="fas fa-star ml-2 text-beige-600"></i>
-            خدمات إضافية
-          </label>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <label class="flex items-center gap-2 cursor-pointer" data-i18n="book.wifi">
-              <input type="checkbox" value="واي فاي" class="extra-service w-5 h-5 cursor-pointer accent-beige-600" />
-              واي فاي مجاني
-            </label>
-            <label class="flex items-center gap-2 cursor-pointer" data-i18n="book.water">
-              <input type="checkbox" value="مياه باردة" class="extra-service w-5 h-5 cursor-pointer accent-beige-600" />
-              مياه باردة
-            </label>
-            <label class="flex items-center gap-2 cursor-pointer" data-i18n="book.magazines">
-              <input type="checkbox" value="مجلات وصحف" class="extra-service w-5 h-5 cursor-pointer accent-beige-600" />
-              مجلات وصحف
-            </label>
-            <!-- <label style="display: flex; align-items: center; gap: 0.5rem; font-size: ${config.font_size * 0.95}px; font-family: &#39;${config.font_family}&#39;, sans-serif; cursor: pointer;">
-              <input type="checkbox" value="كرسي أطفال" class="extra-service" style="width: 1.2rem; height: 1.2rem; cursor: pointer; accent-color: ${config.primary_action_color};" />
-              كرسي أطفال
-            </label> -->
-          </div>
-        </div>
-        <!-- Notes -->
-        <div style="grid-column: 1 / -1;">
-          <label for="notes" class="block mb-2 font-bold text-gray-700">
-            <i class="fas fa-comment ml-2 text-beige-600"></i>
-            <span data-i18n="book.form.notes">ملاحظات إضافية</span>
-          </label>
-          <textarea id="notes" rows="4" class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl" data-i18n-placeholder="book.notes.placeholder" placeholder="أخبرنا بأي متطلبات خاصة...">
-          </textarea>
-        </div>
-        <!-- Submit Button -->
-        <div class="md:col-span-2 text-center mt-4">
-          <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded-2xl font-bold hover:bg-green-600 transition-all duration-300 hover:scale-105 hover:shadow-lg">
-            <i class="fab fa-whatsapp ml-2"></i>
-            <span data-i18n="book.form.submit">إرسال الحجز عبر واتساب</span>
-          </button>
-        </div>
-      </form>
-    </section>
-    <script>
-      const bookingForm = document.getElementById('bookingForm');
-    bookingForm.addEventListener('submit', function(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
-      const fromCity = document.getElementById('fromCity').value;
-      const toCity = document.getElementById('toCity').value;
-      const tripDate = document.getElementById('tripDate').value;
-      const tripTime = document.getElementById('tripTime').value;
-      const passengers = document.getElementById('passengers').value;
-      const tripType = document.getElementById('tripType').value;
+    <div>
+      <label for="phone" class="block mb-2 font-bold text-gray-700">
+        <i class="fas fa-phone ml-2 text-beige-600"></i> رقم الجوال
+      </label>
+      <input type="tel" id="phone" required maxlength="15" placeholder="أدخل رقم الجوال" 
+        class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl"
+        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+        onpaste="event.preventDefault(); const paste = (event.clipboardData || window.clipboardData).getData('text'); this.value += paste.replace(/[^0-9]/g,'');" />
+    </div>
+    <!-- From City -->
+    <div>
+      <label for="fromCity" class="block mb-2 font-bold text-gray-700">
+        <i class="fas fa-map-marker-alt ml-2 text-beige-600"></i> من مدينة
+      </label>
+      <select id="fromCity" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
+        <option value="" selected>اختر المدينة</option>
+        <option value="الرياض">الرياض</option>
+        <option value="جدة">جدة</option>
+        <option value="مكة">مكة المكرمة</option>
+        <option value="المدينة">المدينة المنورة</option>
+      </select>
+    </div>
+    <!-- To City -->
+    <div>
+      <label for="toCity" class="block mb-2 font-bold text-gray-700">
+        <i class="fas fa-map-marker-alt ml-2 text-beige-600"></i> إلى مدينة
+      </label>
+      <select id="toCity" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
+        <option value="" selected>اختر المدينة</option>
+        <option value="الرياض">الرياض</option>
+        <option value="جدة">جدة</option>
+        <option value="مكة">مكة المكرمة</option>
+        <option value="المدينة">المدينة المنورة</option>
+      </select>
+    </div>
+    <!-- Date -->
+    <div>
+      <label for="tripDate" class="block mb-2 font-bold text-gray-700">
+        <i class="fas fa-calendar ml-2 text-beige-600"></i> تاريخ الرحلة
+      </label>
+      <input type="date" id="tripDate" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl" />
+    </div>
+    <!-- Time -->
+    <div>
+      <label for="tripTime" class="block mb-2 font-bold text-gray-700">
+        <i class="fas fa-clock ml-2 text-beige-600"></i> وقت الرحلة
+      </label>
+      <input type="time" id="tripTime" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl" />
+    </div>
+    <!-- Passengers -->
+    <div>
+      <label for="passengers" class="block mb-2 font-bold text-gray-700">
+        <i class="fas fa-users ml-2 text-beige-600"></i> عدد المسافرين
+      </label>
+      <select id="passengers" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
+        <option value="1" selected>1 شخص</option>
+        <option value="2">2 شخص</option>
+        <option value="3">3 أشخاص</option>
+        <option value="4">4 أشخاص</option>
+        <option value="5">5 أشخاص</option>
+        <option value="6">6+ أشخاص</option>
+      </select>
+    </div>
+    <!-- Car Type -->
+    <div>
+      <label for="carType" class="block mb-2 font-bold text-gray-700">
+        <i class="fas fa-car-side ml-2 text-beige-600"></i> نوع السيارة
+      </label>
+      <select id="carType" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
+        <option value="" selected>اختر السيارة</option>
+        <option value="Toyota Camry 2025">Toyota Camry 2025</option>
+        <option value="Land Cruiser 2025">Land Cruiser 2025</option>
+        <option value="Mercedes S-Class 2025">Mercedes S-Class 2025</option>
+        <option value="Lexus LS 2025">Lexus LS 2025</option>
+        <option value="Range Rover 2025">Range Rover 2025</option>
+        <option value="GMC Yukon 2025">GMC Yukon 2025</option>
+        <option value="Toyota Hiace 2025">Toyota Hiace 2025</option>
+        <option value="Ford Taurus 2025">Ford Taurus 2025</option>
+        <option value="Lexus LX 570 2025">Lexus LX 570 2025</option>
+        <option value="Toyota Crown 2025">Toyota Crown 2025</option>
+        <option value="Mercedes-Benz V-Class 2025">Mercedes-Benz V-Class 2025</option>
+      </select>
+    </div>
+    <!-- Trip Type -->
+    <div>
+      <label for="tripType" class="block mb-2 font-bold text-gray-700">
+        <i class="fas fa-car ml-2 text-beige-600"></i> نوع الرحلة
+      </label>
+      <select id="tripType" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
+        <option value="رحلة فردية" selected>رحلة فردية</option>
+        <option value="رحلة جماعية">رحلة جماعية</option>
+        <option value="VIP">VIP</option>
+      </select>
+    </div>
+    <!-- Submit -->
+    <div class="md:col-span-2 text-center mt-4">
+      <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded-2xl font-bold hover:bg-green-600 transition-all">
+        <i class="fab fa-whatsapp ml-2"></i> إرسال الحجز عبر واتساب
+      </button>
+    </div>
+  </form>
+</section>
 
-const carType = document.getElementById('carType').value;
+<script>
+  const bookingForm = document.getElementById('bookingForm');
 
-const message = `🎫 *حجز رحلة جديدة - دربك*
+  bookingForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const fromCity = document.getElementById('fromCity').value;
+    const toCity = document.getElementById('toCity').value;
+    const tripDate = document.getElementById('tripDate').value;
+    const tripTime = document.getElementById('tripTime').value;
+    const passengers = document.getElementById('passengers').value;
+    const tripType = document.getElementById('tripType').value;
+    const carType = document.getElementById('carType').value;
 
-👤 *الاسم:* ${name}
-📱 *الجوال:* ${phone}
-
-🚗 *تفاصيل الرحلة:*
+    const message = `🎫 حجز رحلة جديدة - دربك
+👤 الاسم: ${name}
+📱 الجوال: ${phone}
 📍 من: ${fromCity}
 📍 إلى: ${toCity}
 📅 التاريخ: ${tripDate}
@@ -367,20 +193,24 @@ const message = `🎫 *حجز رحلة جديدة - دربك*
 🚙 نوع السيارة: ${carType}
 ✨ نوع الرحلة: ${tripType}`;
 
-      const whatsappURL = `https://wa.me/966546301944?text=${encodeURIComponent(message)}`;
-      window.open(whatsappURL, '_blank');
-    });
-    </script>
+    const whatsappURL = `https://wa.me/966546301944?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, '_blank');
+  });
 
-
-
-<script src="js/script.js"></script>
-<script src="js/i18n.js"></script>
-
+  // Dark Mode Toggle
+  const darkToggle = document.getElementById('darkToggle');
+  darkToggle.addEventListener('click', function(){
+    document.body.classList.toggle('dark-mode');
+    const icon = darkToggle.querySelector('i');
+    if(document.body.classList.contains('dark-mode')){
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    } else {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+    }
+  });
 </script>
-<div class="copyright" style="text-align: center; padding: 20px; background: #f8f9fa; margin-top: 50px;">
-    © 2025 دربك - جميع الحقوق محفوظة | رقم السجل التجاري: 4031312950
-</div>
 
 </body>
 </html>
