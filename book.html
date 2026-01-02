@@ -31,23 +31,26 @@
 <!-- Header -->
 <header class="bg-gray-800 text-white p-6 flex justify-between items-center shadow-lg">
   <div>
-    <h1 class="text-3xl font-extrabold text-beige-600">دربك</h1>
-    <p class="text-sm">حلتك معنا.. أمان وفخامة</p>
+    <h1 class="text-3xl font-extrabold text-beige-600" id="companyName">دربك</h1>
+    <p class="text-sm" id="companySlogan">حلتك معنا.. أمان وفخامة</p>
   </div>
   <div class="flex items-center gap-3">
     <a href="index.html" class="bg-beige-600 text-white px-4 py-2 rounded-2xl font-bold flex items-center gap-2">
-      <i class="fas fa-home"></i> الصفحة الرئيسية
+      <i class="fas fa-home"></i> <span id="homeText">الصفحة الرئيسية</span>
     </a>
     <button id="darkToggle" class="bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-white p-2 rounded-full text-lg">
       <i class="fas fa-moon"></i>
+    </button>
+    <button id="langToggle" class="bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-white p-2 rounded-full text-lg">
+      <i class="fas fa-language"></i>
     </button>
   </div>
 </header>
 
 <!-- Hero Section -->
 <section class="hero-pattern py-16 text-center text-white">
-  <h2 class="text-4xl font-extrabold mb-4">احجز رحلتك الفاخرة الآن</h2>
-  <p class="text-lg">خدمة نقل آمنة ومريحة بين المدن والمطارات</p>
+  <h2 class="text-4xl font-extrabold mb-4" id="heroTitle">احجز رحلتك الفاخرة الآن</h2>
+  <p class="text-lg" id="heroSubtitle">خدمة نقل آمنة ومريحة بين المدن والمطارات</p>
 </section>
 
 <!-- Booking Form -->
@@ -55,7 +58,7 @@
   <form id="bookingForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
     <!-- Name -->
     <div>
-      <label for="name" class="block mb-2 font-bold text-gray-700">
+      <label for="name" class="block mb-2 font-bold text-gray-700" id="labelName">
         <i class="fas fa-user ml-2 text-beige-600"></i> الاسم الكامل
       </label>
       <input type="text" id="name" required 
@@ -65,7 +68,7 @@
     </div>
     <!-- Phone -->
     <div>
-      <label for="phone" class="block mb-2 font-bold text-gray-700">
+      <label for="phone" class="block mb-2 font-bold text-gray-700" id="labelPhone">
         <i class="fas fa-phone ml-2 text-beige-600"></i> رقم الجوال
       </label>
       <input type="tel" id="phone" required maxlength="15" placeholder="أدخل رقم الجوال" 
@@ -75,11 +78,11 @@
     </div>
     <!-- From City -->
     <div>
-      <label for="fromCity" class="block mb-2 font-bold text-gray-700">
+      <label for="fromCity" class="block mb-2 font-bold text-gray-700" id="labelFromCity">
         <i class="fas fa-map-marker-alt ml-2 text-beige-600"></i> من مدينة
       </label>
       <select id="fromCity" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
-        <option value="" selected>اختر المدينة</option>
+        <option value="" selected id="fromCityOption">اختر المدينة</option>
         <option value="الرياض">الرياض</option>
         <option value="جدة">جدة</option>
         <option value="مكة">مكة المكرمة</option>
@@ -88,11 +91,11 @@
     </div>
     <!-- To City -->
     <div>
-      <label for="toCity" class="block mb-2 font-bold text-gray-700">
+      <label for="toCity" class="block mb-2 font-bold text-gray-700" id="labelToCity">
         <i class="fas fa-map-marker-alt ml-2 text-beige-600"></i> إلى مدينة
       </label>
       <select id="toCity" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
-        <option value="" selected>اختر المدينة</option>
+        <option value="" selected id="toCityOption">اختر المدينة</option>
         <option value="الرياض">الرياض</option>
         <option value="جدة">جدة</option>
         <option value="مكة">مكة المكرمة</option>
@@ -101,21 +104,21 @@
     </div>
     <!-- Date -->
     <div>
-      <label for="tripDate" class="block mb-2 font-bold text-gray-700">
+      <label for="tripDate" class="block mb-2 font-bold text-gray-700" id="labelDate">
         <i class="fas fa-calendar ml-2 text-beige-600"></i> تاريخ الرحلة
       </label>
       <input type="date" id="tripDate" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl" />
     </div>
     <!-- Time -->
     <div>
-      <label for="tripTime" class="block mb-2 font-bold text-gray-700">
+      <label for="tripTime" class="block mb-2 font-bold text-gray-700" id="labelTime">
         <i class="fas fa-clock ml-2 text-beige-600"></i> وقت الرحلة
       </label>
       <input type="time" id="tripTime" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl" />
     </div>
     <!-- Passengers -->
     <div>
-      <label for="passengers" class="block mb-2 font-bold text-gray-700">
+      <label for="passengers" class="block mb-2 font-bold text-gray-700" id="labelPassengers">
         <i class="fas fa-users ml-2 text-beige-600"></i> عدد المسافرين
       </label>
       <select id="passengers" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
@@ -129,11 +132,11 @@
     </div>
     <!-- Car Type -->
     <div>
-      <label for="carType" class="block mb-2 font-bold text-gray-700">
+      <label for="carType" class="block mb-2 font-bold text-gray-700" id="labelCarType">
         <i class="fas fa-car-side ml-2 text-beige-600"></i> نوع السيارة
       </label>
       <select id="carType" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
-        <option value="" selected>اختر السيارة</option>
+        <option value="" selected id="carOption">اختر السيارة</option>
         <option value="Toyota Camry 2025">Toyota Camry 2025</option>
         <option value="Land Cruiser 2025">Land Cruiser 2025</option>
         <option value="Mercedes S-Class 2025">Mercedes S-Class 2025</option>
@@ -149,7 +152,7 @@
     </div>
     <!-- Trip Type -->
     <div>
-      <label for="tripType" class="block mb-2 font-bold text-gray-700">
+      <label for="tripType" class="block mb-2 font-bold text-gray-700" id="labelTripType">
         <i class="fas fa-car ml-2 text-beige-600"></i> نوع الرحلة
       </label>
       <select id="tripType" required class="input-focus w-full p-4 border-2 border-gray-300 rounded-xl">
@@ -160,7 +163,7 @@
     </div>
     <!-- Submit -->
     <div class="md:col-span-2 text-center mt-4">
-      <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded-2xl font-bold hover:bg-green-600 transition-all">
+      <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded-2xl font-bold hover:bg-green-600 transition-all" id="submitBtn">
         <i class="fab fa-whatsapp ml-2"></i> إرسال الحجز عبر واتساب
       </button>
     </div>
@@ -168,21 +171,20 @@
 </section>
 
 <script>
-  const bookingForm = document.getElementById('bookingForm');
+const bookingForm = document.getElementById('bookingForm');
+bookingForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const fromCity = document.getElementById('fromCity').value;
+  const toCity = document.getElementById('toCity').value;
+  const tripDate = document.getElementById('tripDate').value;
+  const tripTime = document.getElementById('tripTime').value;
+  const passengers = document.getElementById('passengers').value;
+  const tripType = document.getElementById('tripType').value;
+  const carType = document.getElementById('carType').value;
 
-  bookingForm.addEventListener('submit', function(e){
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
-    const fromCity = document.getElementById('fromCity').value;
-    const toCity = document.getElementById('toCity').value;
-    const tripDate = document.getElementById('tripDate').value;
-    const tripTime = document.getElementById('tripTime').value;
-    const passengers = document.getElementById('passengers').value;
-    const tripType = document.getElementById('tripType').value;
-    const carType = document.getElementById('carType').value;
-
-    const message = `🎫 حجز رحلة جديدة - دربك
+  const message = `🎫 حجز رحلة جديدة - دربك
 👤 الاسم: ${name}
 📱 الجوال: ${phone}
 📍 من: ${fromCity}
@@ -193,23 +195,69 @@
 🚙 نوع السيارة: ${carType}
 ✨ نوع الرحلة: ${tripType}`;
 
-    const whatsappURL = `https://wa.me/966546301944?text=${encodeURIComponent(message)}`;
-    window.open(whatsappURL, '_blank');
-  });
+  const whatsappURL = `https://wa.me/966546301944?text=${encodeURIComponent(message)}`;
+  window.open(whatsappURL, '_blank');
+});
 
-  // Dark Mode Toggle
-  const darkToggle = document.getElementById('darkToggle');
-  darkToggle.addEventListener('click', function(){
-    document.body.classList.toggle('dark-mode');
-    const icon = darkToggle.querySelector('i');
-    if(document.body.classList.contains('dark-mode')){
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-    } else {
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon');
-    }
-  });
+// Dark Mode Toggle
+const darkToggle = document.getElementById('darkToggle');
+darkToggle.addEventListener('click', function(){
+  document.body.classList.toggle('dark-mode');
+  const icon = darkToggle.querySelector('i');
+  if(document.body.classList.contains('dark-mode')){
+    icon.classList.remove('fa-moon'); icon.classList.add('fa-sun');
+  } else {
+    icon.classList.remove('fa-sun'); icon.classList.add('fa-moon');
+  }
+});
+
+// Language Toggle
+let isArabic = true;
+const langToggle = document.getElementById('langToggle');
+langToggle.addEventListener('click', function(){
+  isArabic = !isArabic;
+  if(isArabic){
+    document.body.dir = "rtl";
+    document.getElementById('companyName').innerText = "دربك";
+    document.getElementById('companySlogan').innerText = "حلتك معنا.. أمان وفخامة";
+    document.getElementById('homeText').innerText = "الصفحة الرئيسية";
+    document.getElementById('heroTitle').innerText = "احجز رحلتك الفاخرة الآن";
+    document.getElementById('heroSubtitle').innerText = "خدمة نقل آمنة ومريحة بين المدن والمطارات";
+    document.getElementById('labelName').innerText = "الاسم الكامل";
+    document.getElementById('labelPhone').innerText = "رقم الجوال";
+    document.getElementById('labelFromCity').innerText = "من مدينة";
+    document.getElementById('fromCityOption').innerText = "اختر المدينة";
+    document.getElementById('labelToCity').innerText = "إلى مدينة";
+    document.getElementById('toCityOption').innerText = "اختر المدينة";
+    document.getElementById('labelDate').innerText = "تاريخ الرحلة";
+    document.getElementById('labelTime').innerText = "وقت الرحلة";
+    document.getElementById('labelPassengers').innerText = "عدد المسافرين";
+    document.getElementById('labelCarType').innerText = "نوع السيارة";
+    document.getElementById('carOption').innerText = "اختر السيارة";
+    document.getElementById('labelTripType').innerText = "نوع الرحلة";
+    document.getElementById('submitBtn').innerHTML = '<i class="fab fa-whatsapp ml-2"></i> إرسال الحجز عبر واتساب';
+  } else {
+    document.body.dir = "ltr";
+    document.getElementById('companyName').innerText = "Darbak";
+    document.getElementById('companySlogan').innerText = "Luxury & Safe Transport";
+    document.getElementById('homeText').innerText = "Home";
+    document.getElementById('heroTitle').innerText = "Book Your Luxury Trip Now";
+    document.getElementById('heroSubtitle').innerText = "Safe and comfortable transport between cities and airports";
+    document.getElementById('labelName').innerText = "Full Name";
+    document.getElementById('labelPhone').innerText = "Phone Number";
+    document.getElementById('labelFromCity').innerText = "From City";
+    document.getElementById('fromCityOption').innerText = "Select City";
+    document.getElementById('labelToCity').innerText = "To City";
+    document.getElementById('toCityOption').innerText = "Select City";
+    document.getElementById('labelDate').innerText = "Trip Date";
+    document.getElementById('labelTime').innerText = "Trip Time";
+    document.getElementById('labelPassengers').innerText = "Passengers";
+    document.getElementById('labelCarType').innerText = "Car Type";
+    document.getElementById('carOption').innerText = "Select Car";
+    document.getElementById('labelTripType').innerText = "Trip Type";
+    document.getElementById('submitBtn').innerHTML = '<i class="fab fa-whatsapp ml-2"></i> Send Booking via WhatsApp';
+  }
+});
 </script>
 
 </body>
