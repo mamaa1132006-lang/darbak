@@ -4,23 +4,21 @@
 
 
 
-  <!-- CSP صارم -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none';">
+   <meta http-equiv="Content-Security-Policy"
+content="
+default-src 'self';
+img-src 'self' data: https:;
+style-src 'self' 'unsafe-inline';
+script-src 'self';
+font-src 'self' https:;
+connect-src 'self';
+frame-ancestors 'none';
+">
 
-  <!-- منع Clickjacking -->
-  <meta http-equiv="X-Frame-Options" content="DENY">
-
-  <!-- COOP & COEP -->
-  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-  <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
-
-  <!-- تحسين الأمان -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta name="referrer" content="no-referrer">
-
-
-
-
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
 
 
 
@@ -682,6 +680,9 @@ Has legacy data: NO
               <a href="book.html" id="book-link-ar" data-i18n="footer.book">              احجز الآن
 </a>
             </li>
+<li>
+  <a href="privacy.html">سياسة الخصوصية</a>
+</li>
           </ul>
         </div>
         <div class="footer-contact">
@@ -735,6 +736,11 @@ Has legacy data: NO
     </script>
     <script src="js/i18n.js">
     </script>
+     <script>
+if (location.protocol !== 'https:') {
+  location.replace('https://' + location.hostname + location.pathname);
+}
+</script>
     <script>
       // FAQ Toggle
     document.querySelectorAll(&#39;.faq-question&#39;).forEach(item =&gt; {
