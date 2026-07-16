@@ -9,9 +9,10 @@
     --white: #ffffff;
     --gray-bg: #f8f9fa;
     --transition: all 0.4s ease;
-    body {
-    overflow-x: hidden;
 }
+
+body {
+    overflow-x: hidden;
 }
 
 
@@ -204,7 +205,7 @@ header {
 }
 
 header a {
-    color: var(--maicolor-one);
+    color: var(--main-color-one);
     text-decoration: none;
 }
 
@@ -422,7 +423,7 @@ header a:hover {
 
 
 
-ء/* ===== Hero Content After ===== */
+/* ===== Hero Content After ===== */
 .hero-content-after {
     display: flex;
     justify-content: center;
@@ -1091,6 +1092,22 @@ footer {
     color: #ccc;
 }
 
+.footer-social {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+}
+
+.footer-social a {
+    color: #ccc;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #b89b7f;
+}
+
 .footer-links h3,
 .footer-contact h3 {
     font-size: 1.3rem;
@@ -1204,3 +1221,370 @@ footer {
 
 
 
+
+
+/* ===== تحسينات الوصولية (Accessibility) ===== */
+
+/* رابط تخطي إلى المحتوى - يظهر فقط عند التركيز عليه بلوحة المفاتيح */
+.skip-link {
+    position: absolute;
+    top: -60px;
+    right: 10px;
+    background-color: var(--navy-dark);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    z-index: 2000;
+    text-decoration: none;
+    font-weight: 700;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* إظهار حالة تركيز واضحة عند التنقل بلوحة المفاتيح على كل العناصر التفاعلية */
+a:focus-visible,
+button:focus-visible,
+.navbar-toggler:focus-visible,
+.faq-question:focus-visible,
+.lang-btn:focus-visible,
+.cmn-btn:focus-visible,
+.btn-book:focus-visible,
+.btn-wa:focus-visible,
+.float-btn:focus-visible {
+    outline: 3px solid var(--beige);
+    outline-offset: 3px;
+}
+
+/* احترام تفضيل المستخدم بتقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* ===== تحسين الحجم والتنسيق ليكون أنسب وأصغر على شاشات الجوال ===== */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    .agency_topbar {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+
+    .topbar-container {
+        gap: 8px;
+    }
+
+    .site-logo {
+        height: 42px;
+    }
+
+    .header-social a {
+        font-size: 18px;
+    }
+
+    .cmn-btn {
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+
+    /* الهيرو */
+    .hero-content-after {
+        padding: 60px 15px;
+    }
+
+    .hero-content-after h1 {
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+    }
+
+    .hero-content-after p {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    .hero-content-after .hero-buttons {
+        margin-top: 20px;
+    }
+
+    .hero-content-after .btn,
+    .hero-content-after .btn-book {
+        font-size: 1rem;
+        padding: 10px 22px;
+        margin: 6px;
+    }
+
+    /* الخدمات السريعة ولماذا دربك */
+    .why-choose {
+        padding: 45px 15px;
+    }
+
+    .quick-title h1 {
+        font-size: 1.8rem;
+    }
+
+    .services-grid {
+        gap: 18px;
+    }
+
+    .service-card {
+        padding: 20px 15px;
+        max-width: 100%;
+    }
+
+    .service-card i {
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .service-buttons .btn-book,
+    .service-buttons .btn-wa {
+        font-size: 0.95rem;
+        padding: 8px 16px;
+    }
+
+    #why-title-ar,
+    #about-title-ar,
+    #fleet-title-ar {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .why-wrapper,
+    .about-wrapper {
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .why-content .main-text {
+        font-size: 1rem;
+        margin-bottom: 18px;
+    }
+
+    .why-features {
+        gap: 12px;
+    }
+
+    .feature-item {
+        font-size: 0.95rem;
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .feature-item i {
+        font-size: 1.8rem;
+    }
+
+    /* تعريف الخدمة */
+    .about-text {
+        font-size: 1rem;
+        padding: 18px 20px;
+    }
+
+    .about-service,
+    .fleet-section {
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+
+    /* الأسطول */
+    .fleet-grid {
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .car-info h3 {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    /* خدمات الحجاج */
+    .hajj-services {
+        padding: 45px 15px;
+    }
+
+    .hajj-services .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .hajj-grid {
+        gap: 18px;
+    }
+
+    .hajj-card {
+        width: 100%;
+        max-width: 260px;
+        padding: 20px 15px;
+    }
+
+    .hajj-card i {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+
+    .hajj-card h3 {
+        font-size: 1.05rem;
+    }
+
+    /* الأسئلة الشائعة */
+    .faq {
+        padding: 45px 15px;
+    }
+
+    .faq .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+        padding: 15px 20px;
+    }
+
+    .faq-answer {
+        font-size: 0.9rem;
+        padding: 0 20px;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 12px 20px;
+    }
+
+    /* الفوتر */
+    footer {
+        padding: 40px 15px 20px;
+    }
+
+    .footer-logo img {
+        width: 130px;
+    }
+
+    .footer-links h3,
+    .footer-contact h3 {
+        font-size: 1.1rem;
+    }
+
+    .footer-contact p,
+    .footer-logo p {
+        font-size: 0.9rem;
+    }
+
+    /* الأزرار العائمة */
+    .float-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .footer-social {
+        justify-content: center;
+        margin: 10px auto 0;
+    }
+
+    .footer-social a {
+        font-size: 18px;
+    }
+}
+
+/* ===== شاشات الجوال الصغيرة جدًا: تصغير إضافي ===== */
+@media (max-width: 380px) {
+    body {
+        font-size: 13.5px;
+    }
+
+    .site-logo {
+        height: 36px;
+    }
+
+    .header-social a {
+        font-size: 16px;
+    }
+
+    .agency_topbar {
+        font-size: 11px;
+        padding: 8px 0;
+    }
+
+    .cmn-btn {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+
+    .hero-content-after {
+        padding: 40px 12px;
+    }
+
+    .hero-content-after h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content-after p {
+        font-size: 0.85rem;
+    }
+
+    .service-card {
+        padding: 16px 12px;
+    }
+
+    .faq-question {
+        font-size: 0.9rem;
+        padding: 12px 15px;
+    }
+
+    .float-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.05rem;
+    }
+
+    .footer-logo img {
+        width: 110px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content-after h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero-content-after p {
+        font-size: 0.9rem;
+    }
+
+    .quick-title h1 {
+        font-size: 1.5rem;
+    }
+
+    #why-title-ar,
+    #about-title-ar,
+    #fleet-title-ar,
+    .hajj-services .section-title,
+    .faq .section-title {
+        font-size: 1.5rem;
+    }
+
+    .cmn-btn {
+        width: 90%;
+    }
+
+    .service-buttons {
+        flex-direction: column;
+    }
+}
